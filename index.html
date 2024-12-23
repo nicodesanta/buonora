@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>BUONORA</title>
+  </head>
+  <body>
+    <script src="/app/logic.js"></script>
+    <div class="desktop">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <img
+          src="./IMGS/logo - copia-Photoroom.png"
+          alt="MDN"
+          width="59"
+          height="50"
+        />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Inicio <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">QUIEN SOY</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">PEDIDOS</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="redes">
+        <div class="imgCarousel">
+          <img
+            src="./IMGS/Untitled design.jpg"
+            class="carouselPh"
+            alt="Snow"
+            style="width: 100%"
+          />
+          <div class="centered">
+            <h1 class="buonora">BUONORA</h1>
+            <h3 class="redes">pastas artesanales</h3>
+          </div>
+          <div class="redesIconos d-flex justify-content-center">
+            <a aria-label="Chat on WhatsApp" href="https://wa.me/+34614343813">
+            <div class="mr-3">
+              <span class="fa-stack bodyColor" style="border-radius: 50%" >
+                <i class="fa fa-whatsapp" ></i
+              ></span></a>
+            </div>
+            <div class="ml-3" >
+              <a href="https://www.instagram.com/buonora_pasta/" target="_blank"> 
+              <span class="fa-stack bodyColor" style="border-radius: 50%" >
+                <i class="fa fa-instagram" ></i
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="imgCarousel">
+                <img
+                  src="./IMGS/_DSC3065.jpg"
+                  class="carouselPh"
+                  alt="Snow"
+                  style="width: 100%"
+                />
+                <div class="centered carouselText">PASTAS RELLENAS</div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="imgCarousel">
+                <img
+                  src="./IMGS/_DSC3317.jpg"
+                  class="carouselPh"
+                  alt="Snow"
+                  style="width: 100%"
+                />
+                <div class="centered carouselText">ACOMPAÑAMIENTOS</div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="imgCarousel">
+                <img
+                  src="./IMGS/focaccia.jpeg"
+                  class="carouselPh"
+                  alt="Snow"
+                  style="width: 100%"
+                />
+                <div class="centered carouselText">FOCACCIAS</div>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class=""></div>
+      </div>
+
+      <div class="container mb-5">
+        <div class="text-center bodyColorForTextx">
+          <h1 class="mt-2">PRECIOS</h1>
+        </div>
+        <div class="d-flex justify-content-center mb-3">
+          <div
+            class="btn-group bg-light"
+            role="group"
+            aria-label="Basic example"
+          >
+            <button type="button" class="btn bg-light" onclick="showPastas()">Pastas</button>
+            <button type="button" class="btn bg-light" onclick="showAcompañar()">Para acompañar</button>
+            <button type="button" class="btn bg-light" onclick="showSalsas()">Salsas</button>
+          </div>
+        </div>
+        <div>
+          <ul class="no-bullets pricesList" >
+            <div id="acompDiv" style="display: none;">
+            <li>
+              <div>
+                <div class="d-flex justify-content-between">
+                <span class="font-weight-bold"><img src="./IMGS/gnocchi.png" width="40" alt="Card image cap" />Focaccia</span>
+                <span class="font-weight-bold">$ 150</span>
+              </div>
+                <p class="">Aceituna, cherry, cebolla</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <div class="d-flex justify-content-between">
+                <span class="font-weight-bold">   <img src="./IMGS/gnocchi.png" width="40" alt="Card image cap" />Grisines</span>
+                <span class=" font-weight-bold">$ 130</span>
+              </div>
+                <p class="">Queso, probalos, haceme caso</p>
+
+              </div>
+            </li>
+          </div>
+            <div id="salsaDiv" style="display: none;">
+            <li>
+              <div>
+                <div class="d-flex justify-content-between">
+                <span class="font-weight-bold">            <img src="./IMGS/gnocchi.png" width="40" alt="Card image cap" />Filetto</span>
+                <span class="font-weight-bold">$ 200</span>
+              </div>
+                <p class="">Tomate italiano, albahaca y ajo confitado</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <div class="d-flex justify-content-between">
+              
+                <span class="font-weight-bold">  <img src="./IMGS/gnocchi.png" width="40" alt="Card image cap" />De queso</span>
+                <span class=" font-weight-bold">$ 230</span></div>
+                <p class="">Parmesano, danbo, gouda</p>
+              </div>
+            </li>
+          </div>
+            <div id="pastasDiv">
+            <li>
+              <div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="font-weight-bold">
+                    <img
+                      src="./IMGS/gnocchi.png"
+                      width="30"
+                      alt="Card image cap"
+                    />Raviolon</span
+                  >
+                  <span class="ml-5 font-weight-bold">10 unidades</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p class="">Cebolla caramelizada</p>
+                  <span class="font-weight-bold">$ 230</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p>Jamón y queso</p>
+                  <span class="font-weight-bold">$ 275</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p >Espinaca</p>
+                  <span class="font-weight-bold">$ 250</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p class="">Calabaza y queso</p>
+                  <span class="font-weight-bold">$ 250</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p>Bondiola y queso</p>
+                  <span class="ml-2 font-weight-bold">$ 300</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="font-weight-bold">
+                    <img
+                      src="./IMGS/gnocchi.png"
+                      width="30"
+                      alt="Card image cap"
+                    />Sorrentinos</span
+                  >
+                  <span class="font-weight-bold">10 unidades</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p>Cebolla caramelizada</p>
+                  <span class=" font-weight-bold">$ 230</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p >Jamón y queso</p>
+                  <span class="ml-2 font-weight-bold">$ 275</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p >Espinaca</p>
+                  <span class="font-weight-bold">$ 250</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p >Calabaza y queso</p>
+                  <span class=" font-weight-bold">$ 250</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p >Bondiola y queso</p>
+                  <span class=" font-weight-bold">$ 300</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class=" ">
+                <div class="d-flex justify-content-between">
+                <span class="font-weight-bold"><img src="./IMGS/gnocchi.png" width="40" alt="Card image cap" />Lasagna</span>
+                <span class=" font-weight-bold">$ 400</span></div>
+                <p class="">Carne, espinaca, champi, bechamel de queso</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <div class="d-flex justify-content-between">
+                <span class="font-weight-bold"> <img src="./IMGS/gnocchi.png" width="40" alt="Card image cap" />Canelones (3uds)</span>
+                <span class=" font-weight-bold">$ 400</span></div>
+                <p class="">Carne, con una salsa incluida</p>
+              </div>
+            </li>
+          </div>
+          </ul>
+        </div>
+        <div class="d-flex justify-content-center"></div>
+      </div>
+
+      <div class="container mb-5">
+        <div class="text-center">
+          <div class="solicita">
+          <h1 class="bodyColorForTextx">SOLICITÁ TU PEDIDO</h1></div>
+          <p class="bodyColorForTextx mt-3" >
+            Entregamos los días jueves y domingos
+            <i class="fa fa-truck" id="camionsito" aria-hidden="true"></i>
+          </p>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1" class="bodyColorForTextx">Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div>
+              <div class="borderCarrito">
+                <div class="d-flex">
+                  <select class="form-select" aria-label="Default select example" id="firstSelect" onchange="populateSecondSelect()">
+                    <option ></option>
+                    <option value="1">Raviolones</option>
+                    <option value="2">Sorrentinos</option>
+                    <option value="3">Lasagna</option>
+                    <option value="4">Canelones</option>
+                    <option value="5">Salsa</option>
+                    <option value="6">Focaccia</option>
+                    <option value="7">Grisines</option>
+                  </select>
+                  
+                  <span class="bodyColorForTextx ml-1 mr-1">de</span>
+                  
+                  <select class="form-select" aria-label="Default select example" id="secondSelect">
+
+                  </select>
+              </div>
+                <input 
+                type="text"
+                class="form-control mt-2 mb-2"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Cantidad"
+              />
+              </div>
+            </div>
+            <div class="">
+            <button class="btn bg-light" onclick="moveTruck()">Agregar</button></div>
+          </form>
+        </div>
+
+        <div class="d-flex mt-3" >
+          <ul class="bodyColorForTextx">
+            <li>
+              1 Lasagna de carne
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <div class="mobile"></div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
