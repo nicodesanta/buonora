@@ -51,12 +51,9 @@
                 >Inicio <span class="sr-only">(current)</span></a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">QUIEN SOY</a>
-            </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">PEDIDOS</a>
+              <a class="nav-link" href="#solicita">PEDIDOS</a>
             </li>
           </ul>
         </div>
@@ -74,7 +71,7 @@
             <h3 class="redes">pastas artesanales</h3>
           </div>
           <div class="redesIconos d-flex justify-content-center">
-            <a aria-label="Chat on WhatsApp" href="https://wa.me/+34614343813">
+            <a aria-label="Chat on WhatsApp" href="https://wa.me/" target="_blank">
             <div class="mr-3">
               <span class="fa-stack bodyColor" style="border-radius: 50%" >
                 <i class="fa fa-whatsapp" ></i
@@ -229,7 +226,7 @@
                   <span class="font-weight-bold">
                     <img
                       src="./IMGS/gnocchi.png"
-                      width="30"
+                      width="40"
                       alt="Card image cap"
                     />Raviolon</span
                   >
@@ -263,7 +260,7 @@
                   <span class="font-weight-bold">
                     <img
                       src="./IMGS/gnocchi.png"
-                      width="30"
+                      width="40"
                       alt="Card image cap"
                     />Sorrentinos</span
                   >
@@ -315,7 +312,7 @@
 
       <div class="container mb-5">
         <div class="text-center">
-          <div class="solicita">
+          <div class="solicita" id="solicita">
           <h1 class="bodyColorForTextx">SOLICITÁ TU PEDIDO</h1></div>
           <p class="bodyColorForTextx mt-3" >
             Entregamos los días jueves y domingos
@@ -324,13 +321,22 @@
         </div>
 
         <div class="d-flex justify-content-center">
-          <form>
+          <div>
             <div class="form-group">
               <label for="exampleInputEmail1" class="bodyColorForTextx">Nombre</label>
               <input
                 type="text"
                 class="form-control"
-                id="exampleInputEmail1"
+                id="nombreInput"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1" class="bodyColorForTextx">Teléfono</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="telefono"
                 aria-describedby="emailHelp"
               />
             </div>
@@ -339,13 +345,13 @@
                 <div class="d-flex">
                   <select class="form-select" aria-label="Default select example" id="firstSelect" onchange="populateSecondSelect()">
                     <option ></option>
-                    <option value="1">Raviolones</option>
-                    <option value="2">Sorrentinos</option>
-                    <option value="3">Lasagna</option>
-                    <option value="4">Canelones</option>
-                    <option value="5">Salsa</option>
-                    <option value="6">Focaccia</option>
-                    <option value="7">Grisines</option>
+                    <option value="Raviolones">Raviolones</option>
+                    <option value="Sorrentinos">Sorrentinos</option>
+                    <option value="Lasagna">Lasagna</option>
+                    <option value="Canelones">Canelones</option>
+                    <option value="Salsa">Salsa</option>
+                    <option value="Focaccia">Focaccia</option>
+                    <option value="Grisines">Grisines</option>
                   </select>
                   
                   <span class="bodyColorForTextx ml-1 mr-1">de</span>
@@ -353,30 +359,41 @@
                   <select class="form-select" aria-label="Default select example" id="secondSelect">
 
                   </select>
-              </div>
+                  </div>
                 <input 
                 type="text"
                 class="form-control mt-2 mb-2"
-                id="exampleInputEmail1"
+                id="cantidad"
                 aria-describedby="emailHelp"
                 placeholder="Cantidad"
+                required
               />
               </div>
             </div>
             <div class="">
-            <button class="btn bg-light" onclick="moveTruck()">Agregar</button></div>
-          </form>
+            <button class="btn bg-light" id="agregarPedido" onclick="add();moveTruck()">Agregar</button></div>
+          </div>
         </div>
 
-        <div class="d-flex mt-3" >
-          <ul class="bodyColorForTextx">
-            <li>
-              1 Lasagna de carne
-            </li>
+        <div class=" mt-3" id="list">
+          <ul class="bodyColorForTextx" id="Ul1">
           </ul>
-
         </div>
       </div>
+      <div class="mb-4">
+        <div>
+          <div class="bodyColorForTextx text-center">
+            Pedir
+          </div>
+          <hr style="background-color: white;">
+          <div class="d-flex justify-content-center g-2">
+            <div>
+            <button class="btn bg-light mr-1" id="pedir" onclick="pedirPorMail()">Vía mail</button></div>
+            <div>
+            <button class="btn bg-light ml-1" id="pedir" onclick="pedirPorWpp()">Vía Whatsapp</button></div>
+          </div>
+
+    </div>
     </div>
     <div class="mobile"></div>
     <!-- Optional JavaScript -->
@@ -396,5 +413,6 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </body>
 </html>
